@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_with	tests		# build with tests
+%bcond_with	forcedns	# intercept and force DNS lookups to use TCP
 #
 Summary:	tsocks - provide transparent SOCKS support
 Summary(pl):	tsocks - przezroczyste wsparcie dla SOCKS
@@ -9,7 +9,7 @@ Version:	1.8
 %define	_beta	beta5
 Release:	0.%{_beta}.1
 License:	GPL v2
-Group:		Applications
+Group:		Networking/Utilities
 Source0:	http://ftp1.sourceforge.net/tsocks/%{name}-%{version}%{_beta}.tar.gz
 # Source0-md5:	51caefd77e5d440d0bbd6443db4fc0f8
 URL:		http://tsocks.sourceforge.net/
@@ -51,7 +51,8 @@ jest odpowiednikiem biblioteki winsock.dll, dostêpnej dla Windows.
 %{__autoconf}
 %{__autoheader}
 cp -f /usr/share/automake/config.sub .
-%configure
+%configure \
+	%{?with_forcedns:--enable-socksdns}
 
 %{__make} \
 	CFLAGS="%{rpmcflags}" \
