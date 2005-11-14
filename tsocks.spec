@@ -61,6 +61,7 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_examplesdir}/%{name}-%{version}}
 
 touch $RPM_BUILD_ROOT%{_sysconfdir}/%{name}.conf
 cp *.example $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+gzip -9n $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
