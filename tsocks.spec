@@ -20,28 +20,29 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 tsocks provides transparent network access through a SOCKS proxy. This
 is common in firewalled LAN environments where all connections to the
-Internet need to pass through a SOCKS server on the firewall.  tsocks
+Internet need to pass through a SOCKS server on the firewall. tsocks
 intercepts the calls applications make to create TCP connections and
 determines if they can be directly accessed or need the SOCKS server.
 If they need the SOCKS server they connection is negotiated with the
-server transparently to the application. This allows existing applications
-to use SOCKS without recompilation or modification. tsocks is a wrapper
-library for a number of socket networking functions.  Essentially it's
-the equivalent of the socksified winsock.dll libraries that are available
-for Windows.
+server transparently to the application. This allows existing
+applications to use SOCKS without recompilation or modification.
+tsocks is a wrapper library for a number of socket networking
+functions. Essentially it's the equivalent of the socksified
+winsock.dll libraries that are available for Windows.
 
 %description -l pl
 tsocsk udostêpnia przezroczysty dostêp do sieci przez proxy SOCKS.
-Jest to powszechne w znajduj±cych siê za firewallami sieciach LAN, gdzie
-wszystkie po³±czenia z Internetem musz± przej¶æ przez serwer SOCKS na
-firewallu.  tsocks przechwytuje zapytania, wykonywane przez aplikacje
-w celu stworzenia po³±czenia TCP i okre¶la, czy mog± one zostaæ wykonane
-bezpo¶rednio, czy potrzebuj± serwera SOCKS.  Ie¶li potrzebuj± serwera
-SOCKS, po³±czenie jest negocjowane z serwerem w sposób przezroczysty
-dla aplikacji.  Pozwala to istniej±cym aplikacjom na u¿ywanie serwera
-SOCKS bez rekompilacji lub modyfikacji.  tsocks jest bibliotek±-wrapperem
-dla czê¶ci funkcji sieciowych, operuj±cych na gniazdach.  Generalnie,
-jest odpowiednikiem biblioteki winsock.dll, dostêpnej dla Windows.
+Jest to powszechne w znajduj±cych siê za firewallami sieciach LAN,
+gdzie wszystkie po³±czenia z Internetem musz± przej¶æ przez serwer
+SOCKS na firewallu. tsocks przechwytuje zapytania, wykonywane przez
+aplikacje w celu stworzenia po³±czenia TCP i okre¶la, czy mog± one
+zostaæ wykonane bezpo¶rednio, czy potrzebuj± serwera SOCKS. Je¶li
+potrzebuj± serwera SOCKS, po³±czenie jest negocjowane z serwerem w
+sposób przezroczysty dla aplikacji. Pozwala to istniej±cym aplikacjom
+na u¿ywanie serwera SOCKS bez rekompilacji lub modyfikacji. tsocks
+jest bibliotek±-wrapperem dla czê¶ci funkcji sieciowych, operuj±cych
+na gniazdach. Generalnie, jest odpowiednikiem biblioteki winsock.dll,
+dostêpnej dla Windows.
 
 %prep
 %setup -q
@@ -60,7 +61,6 @@ cp -f /usr/share/automake/config.sub .
 	SAVE=
 # empty SAVE= above is a trick: I don't see a point in building
 # /usr/bin/saveme; besides, it implies BR: glibc-static
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
