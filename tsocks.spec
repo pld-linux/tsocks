@@ -3,7 +3,7 @@
 %bcond_with	forcedns	# intercept and force DNS lookups to use TCP
 #
 Summary:	tsocks - provide transparent SOCKS support
-Summary(pl.UTF-8):   tsocks - przezroczyste wsparcie dla SOCKS
+Summary(pl.UTF-8):	tsocks - przezroczyste wsparcie dla SOCKS
 Name:		tsocks
 Version:	1.8
 %define	_beta	beta5
