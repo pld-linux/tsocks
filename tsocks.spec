@@ -3,7 +3,7 @@
 %bcond_with	forcedns	# intercept and force DNS lookups to use TCP
 #
 Summary:	tsocks - provide transparent SOCKS support
-Summary(pl):	tsocks - przezroczyste wsparcie dla SOCKS
+Summary(pl.UTF-8):   tsocks - przezroczyste wsparcie dla SOCKS
 Name:		tsocks
 Version:	1.8
 %define	_beta	beta5
@@ -30,19 +30,19 @@ tsocks is a wrapper library for a number of socket networking
 functions. Essentially it's the equivalent of the socksified
 winsock.dll libraries that are available for Windows.
 
-%description -l pl
-tsocsk udostêpnia przezroczysty dostêp do sieci przez proxy SOCKS.
-Jest to powszechne w znajduj±cych siê za firewallami sieciach LAN,
-gdzie wszystkie po³±czenia z Internetem musz± przej¶æ przez serwer
+%description -l pl.UTF-8
+tsocsk udostÄ™pnia przezroczysty dostÄ™p do sieci przez proxy SOCKS.
+Jest to powszechne w znajdujÄ…cych siÄ™ za firewallami sieciach LAN,
+gdzie wszystkie poÅ‚Ä…czenia z Internetem muszÄ… przejÅ›Ä‡ przez serwer
 SOCKS na firewallu. tsocks przechwytuje zapytania, wykonywane przez
-aplikacje w celu stworzenia po³±czenia TCP i okre¶la, czy mog± one
-zostaæ wykonane bezpo¶rednio, czy potrzebuj± serwera SOCKS. Je¶li
-potrzebuj± serwera SOCKS, po³±czenie jest negocjowane z serwerem w
-sposób przezroczysty dla aplikacji. Pozwala to istniej±cym aplikacjom
-na u¿ywanie serwera SOCKS bez rekompilacji lub modyfikacji. tsocks
-jest bibliotek±-wrapperem dla czê¶ci funkcji sieciowych, operuj±cych
+aplikacje w celu stworzenia poÅ‚Ä…czenia TCP i okreÅ›la, czy mogÄ… one
+zostaÄ‡ wykonane bezpoÅ›rednio, czy potrzebujÄ… serwera SOCKS. JeÅ›li
+potrzebujÄ… serwera SOCKS, poÅ‚Ä…czenie jest negocjowane z serwerem w
+sposÃ³b przezroczysty dla aplikacji. Pozwala to istniejÄ…cym aplikacjom
+na uÅ¼ywanie serwera SOCKS bez rekompilacji lub modyfikacji. tsocks
+jest bibliotekÄ…-wrapperem dla czÄ™Å›ci funkcji sieciowych, operujÄ…cych
 na gniazdach. Generalnie, jest odpowiednikiem biblioteki winsock.dll,
-dostêpnej dla Windows.
+dostÄ™pnej dla Windows.
 
 %prep
 %setup -q
