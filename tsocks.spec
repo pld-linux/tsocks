@@ -7,7 +7,7 @@ Summary(pl.UTF-8):	tsocks - przezroczyste wsparcie dla SOCKS
 Name:		tsocks
 Version:	1.8
 %define	_beta	beta5
-Release:	0.%{_beta}.1
+Release:	0.%{_beta}.2
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://ftp1.sourceforge.net/tsocks/%{name}-%{version}%{_beta}.tar.gz
@@ -83,8 +83,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog FAQ TODO
-%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
-%attr(755,root,root) %{_libdir}/*.so.*
+%attr(644,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
+%attr(755,root,root) %{_libdir}/*.so*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
 %{_examplesdir}/%{name}-%{version}
