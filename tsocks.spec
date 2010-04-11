@@ -7,11 +7,12 @@ Summary(pl.UTF-8):	tsocks - przezroczyste wsparcie dla SOCKS
 Name:		tsocks
 Version:	1.8
 %define	_beta	beta5
-Release:	0.%{_beta}.2
+Release:	0.%{_beta}.3
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://ftp1.sourceforge.net/tsocks/%{name}-%{version}%{_beta}.tar.gz
 # Source0-md5:	51caefd77e5d440d0bbd6443db4fc0f8
+Patch0:		%{name}-lib64.patch
 URL:		http://tsocks.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -46,6 +47,8 @@ dostępnej dla Windows.
 
 %prep
 %setup -q
+%patch0 -p0
+%{__sed} -i 's#@lib@#%{_lib}#g' tsocks
 
 %build
 %{__aclocal}
