@@ -7,7 +7,7 @@ Summary(pl.UTF-8):	tsocks - przezroczyste wsparcie dla SOCKS
 Name:		tsocks
 Version:	1.8
 %define	_beta	beta5
-Release:	0.%{_beta}.3
+Release:	0.%{_beta}.4
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://ftp1.sourceforge.net/tsocks/%{name}-%{version}%{_beta}.tar.gz
@@ -60,7 +60,7 @@ cp -f /usr/share/automake/config.sub .
 
 %{__make} \
 	CFLAGS="%{rpmcflags}" \
-	LIBS= \
+	LIBS="-lc" \
 	SAVE=
 # empty SAVE= above is a trick: I don't see a point in building
 # /usr/bin/saveme; besides, it implies BR: glibc-static
