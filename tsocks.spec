@@ -47,7 +47,7 @@ dostępnej dla Windows.
 
 %prep
 %setup -q
-%patch0 -p0
+%patch -P0 -p0
 %{__sed} -i 's#@lib@#%{_lib}#g' tsocks
 
 %build
